@@ -7,7 +7,7 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #cfcfcf;
+  background-color: #4b4a4a;
 }
 
 .App {
@@ -39,31 +39,6 @@ body{
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-.nameOfTheStars {
-  color: rgb(29, 29, 80);
-}
-
-.imageNightSky {
-  width: 60vw;
-  height: 60vh;
-  padding: 20px;
-
-}
-
-.textExplanation{
-  display: inline-block;
-  padding: 0.6em;
-  min-width: 5ch;
-  border-radius: 1.1em;
-  color: rgb(29, 29, 80);
-  max-width: 100%;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  text-align: center;
-  text-justify: inter-word;
-  font-size: 1.4em;
 }
 
 .App-link {
