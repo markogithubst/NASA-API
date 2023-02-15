@@ -6,8 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import styled from 'styled-components';
 import { theme } from './view/materialTheme';
-import backgroundImage from '../src/images/backgoundImage.jpg'
-
+import backgroundImage from '../src/images/backgoundImage.jpg';
 
 const useStyles = makeStyles({
   root: {
@@ -38,7 +37,7 @@ function Data() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetchData('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY', setData, setError);
+    fetchData(`https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_API_KEY}`, setData, setError);
   }, []);
 
   if (error) {
