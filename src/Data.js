@@ -6,17 +6,30 @@ import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import styled from 'styled-components';
 import { theme } from './view/materialTheme';
+import backgroundImage from '../src/images/backgoundImage.jpg'
 
 
 const useStyles = makeStyles({
-    root: theme.root,
-    image: theme.image,
-    title: theme.title,
-    text: theme.text
-  });
+  root: {
+    margin: '20px auto',
+    padding: '40px',
+    maxWidth: '100%',
+    backgroundImage: `url(${backgroundImage})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundColor: 'black',
+    opacity: 0.9
+  },
+  image: theme.image,
+  title: theme.title,
+  text: theme.text
+});
 
 const ImageContainer = styled.div`
   text-align: center;
+  img {
+    border-radius: 30px;
+  }
 `;
 
 function Data() {
@@ -39,7 +52,7 @@ function Data() {
   const { title, url, explanation } = data;
 
   return (
-    <Paper className={classes.root}>
+      <Paper className={classes.root}>
       <Typography variant="h4" className={classes.title}>
         {title}
       </Typography>

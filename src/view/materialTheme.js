@@ -2,11 +2,12 @@ export const theme = {
     root: {
       padding: '40px',
       maxWidth: '100%',
-      backgroundColor: 'grey',
-      border: 'solid 1px'
+      border: 'solid 1px',
+      opacity: 0.8,
+      
     },
     image: {
-      width: '60%',
+      width: '70%',
       height: '60%',
       objectFit: 'fill'
     },
@@ -14,14 +15,18 @@ export const theme = {
       textAlign: 'center',
       margin: '20px 0',
       fontSize: '4em',
-      fontFamily: 'Garamond'
+      fontFamily: 'Garamond',
+      color: '#9cdfb8',
+      textShadow: '1px 2px #000000'
     },
     text: {
       textAlign: 'justify',
-      fontSize: '2em',
+      fontSize: '1.6em',
       fontFamily: 'Georgia',
       maxWidth: '100%',
-      padding: '20px'
+      padding: '20px',
+      color: '#d1b49f',
+      textShadow: '1px 1px #ffffff'
     }
   };
   
