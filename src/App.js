@@ -1,6 +1,6 @@
 import './App.css';
 
-import Data from './Data';
+import Data from '../src/api/Data';
 
 function App() {
   return (
