@@ -14,10 +14,8 @@ export const theme = {
     title: {
       textAlign: 'center',
       margin: '20px 0',
-      fontSize: '4em',
       fontFamily: 'Garamond',
-      color: '#9cdfb8',
-      textShadow: '1px 2px #000000'
+      color: '#6b6b57'
     },
     text: {
       textAlign: 'justify',
@@ -25,8 +23,7 @@ export const theme = {
       fontFamily: 'Georgia',
       maxWidth: '100%',
       padding: '20px',
-      color: '#d1b49f',
-      textShadow: '1px 1px #ffffff'
+      color: '#4b4b3d'
     }
   };
   
