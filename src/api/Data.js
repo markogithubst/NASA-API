@@ -1,23 +1,19 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { useEffect, useState } from 'react';
-import { fetchData } from './services/fetchData';
+import { fetchData } from '../services/fetchData';
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import styled from 'styled-components';
-import { theme } from './view/materialTheme';
-import backgroundImage from '../src/images/backgoundImage.jpg';
+import { theme } from '../view/materialTheme';
+import { Grid } from '@mui/material';
 
 const useStyles = makeStyles({
   root: {
-    margin: '20px auto',
+    margin: 'auto',
     padding: '40px',
     maxWidth: '100%',
-    backgroundImage: `url(${backgroundImage})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    backgroundColor: 'black',
-    opacity: 0.9
+    backgroundColor: '#f0f0ec'
   },
   image: theme.image,
   title: theme.title,
@@ -45,22 +41,36 @@ function Data() {
   }
 
   if (!data) {
-    return <div>Loading NASA data</div>;
+    return <div>
+      <Typography variant="h4">
+        Loading NASA data
+      </Typography>
+      </div>;
   }
 
-  const { title, url, explanation } = data;
+  const { title, url, explanation, date } = data;
 
   return (
       <Paper className={classes.root}>
-      <Typography variant="h4" className={classes.title}>
+        <Typography variant="h4">
+        Astronomy Picture of the Day
+      </Typography>
+      <Typography variant="subtitle1" style={{ padding:'10px'}} >
         {title}
       </Typography>
       <ImageContainer>
         <img className={classes.image} src={url} alt={title} />
       </ImageContainer>
-      <Typography variant="body1" className={classes.text}>
+      <Typography variant="body1" style={{ padding:'10px'}} >
         {explanation}
       </Typography>
+      <Grid container justifyContent={'left'}>
+        <Grid item>
+        <Typography variant="body1" style={{fontWeight: 'bold', padding:'10px'}} >
+        For date: {date}
+      </Typography>
+        </Grid>
+      </Grid>
     </Paper>
   );
 }
